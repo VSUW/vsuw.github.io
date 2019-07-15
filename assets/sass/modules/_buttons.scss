@@ -1,0 +1,185 @@
+// ========================================================================
+// Component: Button Styles
+// ========================================================================
+
+$btn: (
+  height: 50px,
+  padding: 0 25px,
+);
+
+
+.btn , %btn {
+ 	height: map-get($btn, height);
+	padding: map-get($btn, padding);
+	@include transition(background 200ms ease-in-out, color 200ms ease-in-out);
+	display: inline-block;
+	text-transform: capitalize;
+	font-size: 16px;
+	font-family: $font-default;
+	font-weight: 900;
+	text-align: center;
+	text-decoration: none;
+  letter-spacing: 0px;
+	line-height: map-get($btn, height);
+	color: #fff;
+	background-color: $color-primary;
+	min-width: 216px;
+	cursor: pointer;
+	transition: background-color cubic-bezier(.23,.62,.68,.99) forwards;
+	-webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance:none !important;
+	&:hover {
+		cursor: pointer;
+		text-decoration: none;
+		background-color: $color-primary-dark;
+		transition: background-color cubic-bezier(.23,.62,.68,.99) forwards;
+	}
+}
+
+.btn{
+	&.btn-secondary-alt{
+		background-color: $color-white;
+		border: 1px solid $color-secondary;
+		color: $color-secondary;
+		&:hover{
+			background-color: $color-secondary;
+			color: $color-white;
+			border: 1px solid $color-secondary;
+		}
+	}
+	&.btn-primary-alt{
+		background-color: $color-white;
+		border: 1px solid $color-primary;
+		color: $color-primary;
+		&:hover{
+			background-color: $color-primary;
+			color: $color-white;
+			border: 1px solid $color-primary;
+		}
+	}
+	&.btn-tertiary-alt{
+		background-color: $color-white;
+		border: 1px solid $color-tertiary;
+		color: $color-tertiary;
+		&:hover{
+			background-color: $color-tertiary;
+			color: $color-white;
+			border: 1px solid $color-tertiary;
+		}
+	}
+	&.btn-gray-alt{
+		background-color: $color-white;
+		border: 1px solid $color-gray-dark;
+		color: $color-gray-dark;
+		&:hover{
+			background-color: $color-gray-dark;
+			color: $color-white;
+			border: 1px solid $color-gray-dark;
+		}
+	}
+	&.btn-dark-blue{
+		width: 250px;
+		background-color: #486c95;
+		// border: 1px solid #486c95;
+		color: $color-white;
+		&:hover{
+			background-color: $color-white;;
+			color: #486c95;
+			// border: 1px solid $color-white;
+		}
+	}
+}
+
+.btn{
+	&.btn-secondary-transparent{
+		background-color: transparent;
+		border: 1px solid $color-white;
+		color: $color-white;
+		&:hover{
+			background-color: $color-white;
+			color: $color-secondary;
+			border: 1px solid $color-white;
+		}
+	}
+	&.btn-primary-transparent{
+		background-color: transparent;
+		border: 1px solid $color-white;
+		color: $color-white;
+		&:hover{
+			background-color: $color-white;
+			color: $color-primary;
+			border: 1px solid $color-white;
+		}
+	}
+	&.btn-tertiary-transparent{
+		background-color: transparent;
+		border: 1px solid $color-white;
+		color: $color-white;
+		&:hover{
+			background-color: $color-white;
+			color: $color-tertiary;
+			border: 1px solid $color-white;
+		}
+	}
+	&.btn-gray-transparent{
+		background-color: transparent;
+		border: 1px solid $color-white;
+		color: $color-white;
+		&:hover{
+			background-color: $color-white;
+			color: $color-gray-dark;
+			border: 1px solid $color-white;
+		}
+	}
+}
+
+.btn{
+	&.btn--hero{
+		background-color: rgba(61, 67, 69, 0.4);
+		color: $color-white;
+		&:hover{
+			background-color: rgba(61, 67, 69, 0.9);
+		}
+	}
+	&.btn--hero-sub{
+		background-color: $color-white;
+		border: 1px solid $color-primary;
+		color: $color-primary;
+		&:hover{
+			background-color: $color-primary;
+			color: $color-white;
+			border: 1px solid $color-primary;
+		}
+	}
+}
+
+.btn--link-alt {
+	font-size: 12px;
+	letter-spacing: ls(12px, 140);
+	color: $color-primary;
+	font-family: $font-default;
+	text-decoration: none;
+	font-weight: 500;
+	outline: none;
+	cursor: pointer;
+	text-transform: uppercase;
+
+  i {
+    font-size: 6px;
+    padding-left: 10px;
+    position: relative;
+    top: -1.75px;
+  }
+
+	&:hover {
+		color: $color-primary-dark;
+		text-decoration: none;
+		outline: none;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+

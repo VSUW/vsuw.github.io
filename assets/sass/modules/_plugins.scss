@@ -1,0 +1,130 @@
+// ========================================================================
+// Component: Plugin Styles
+// ========================================================================
+
+
+.accord {
+  border: 1px solid #ccc;
+  margin: 1em 0;
+  // padding: 10px 20px;
+  transition: all 150ms ease-in-out;
+  color: $color-white;
+
+  &:hover {
+   @extend %box-shadow;
+   border: 1px solid #fff;
+   transition: all 150ms ease-in-out;
+
+	 .accord__head {
+	 	color: $color-white;
+	 	transition: all 150ms ease-in-out;
+	 }
+
+		.accord__head::after {
+			color: $color-white;
+		}
+  }
+}
+
+.accord:first-child {
+  margin-top: 0;
+}
+
+.accord__head {
+  cursor: pointer;
+  margin-bottom: 0;
+  overflow: hidden;
+  padding: 20px 30px 20px 30px;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 40px;
+  margin-top: 0px;
+	transition: all 150ms ease-in-out;
+
+  @include media ('mobile') {
+    white-space: inherit;
+    padding: 10px 45px 10px 20px;
+  }
+}
+
+.accord__head::after {
+  content: '\0000D7';
+  position: absolute;
+  right: 30px;
+  top: 15%;
+  width: 0;
+  font-size: 40px !important;
+  font-weight: 100 !important;
+  color: rgba( 61, 67, 69, .6);
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+	transition: transform 150ms ease-in-out;
+	transition: all 150ms ease-in-out;
+	color: $color-white;
+  @include media ('mobile') {
+    top: -5%;
+  }
+  @media only screen 
+    and (min-device-width: 769px) 
+    and (max-device-width: 1024px) 
+    and (-webkit-min-device-pixel-ratio: 1) {
+    top: 7%;
+    right: 40px;
+  }
+}
+
+.accord__body {
+  padding: 30px;
+  border-top: 1px solid #ccc;
+}
+
+.accord.is-open {
+	 @extend %box-shadow;
+	 border: 1px solid #fff;
+	 transition: all 150ms ease-in-out;
+
+	 .accord__head {
+	 	color: $color-white;
+	 	transition: all 150ms ease-in-out;
+	 }
+
+	.accord__head::after {
+	  content: '\0000D7';
+	  position: absolute;
+	  right: 26px;
+  	top: -2%;
+	  width: 0;
+	  color: $color-white;
+	  transform: rotate(90deg);
+	  -ms-transform: rotate(90deg);
+	  -webkit-transform: rotate(90deg);
+	  transition: transform 150ms ease-in-out;
+	  transition: all 150ms ease-in-out;
+	  color: $color-white;
+    @include media ('mobile') {
+    top: -5%;
+    }
+    @media only screen 
+      and (min-device-width: 769px) 
+      and (max-device-width: 1024px) 
+      and (-webkit-min-device-pixel-ratio: 1) {
+      top: 7%;
+      right: 40px;
+    }
+	}
+}
+
+.accord.is-open > .accord__head::after {
+  border-width: 0 10px 10px;
+  border-color: transparent transparent #ddd;
+}
+
+.accord.accord-simple{
+  // -webkit-appearance: button; /* WebKit */
+  // -moz-appearance: button; /* Mozilla */
+  // -o-appearance: button; /* Opera */
+  // -ms-appearance: button; /* Internet Explorer */
+  // appearance: button; /* CSS3 */
+}

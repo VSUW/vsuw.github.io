@@ -1,0 +1,61 @@
+// ========================================================================
+// Component: Config Styles
+// ========================================================================
+
+
+/**
+ * Font Family
+ */
+$font-default							: "roboto", "OpenSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-heading							: "league-gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;		
+$fa												: "FontAwesome", FontAwesome;
+$font-icons               : "icomoon";										
+
+
+/**
+ * Colors
+ */
+
+$color-primary            : #679BD5; // Primary Color Blue 
+$color-primary-dark       : darken($color-primary, 10%);
+$color-primary-light      : lighten($color-primary, 10%);
+
+$color-secondary          : #FFB351; // Secondary Color Yellow
+$color-secondary-dark     : darken($color-secondary, 10%);
+$color-secondary-light    : lighten($color-secondary, 10%);
+
+$color-tertiary          	: #f04639; // Tertiary Color Red
+$color-tertiary-dark     	: darken($color-tertiary, 10%); 
+$color-tertiary-light    	: lighten($color-tertiary, 10%); 
+
+$color-gray       				: #ececeC;
+$color-gray-dark  				: #3d4345;
+$color-gray-light 				: lighten($color-gray, 10%);
+
+$color-black              : #000;
+$color-white         			: #fff;
+
+$color-anchor-default     : #4ac2be; 
+$color-text-default     	: #262729;
+$color-text-light         : #595a5c;
+
+$color-success          	: #94df60;
+$color-error            	: #e16060;
+
+/**
+ * Breakpoints
+ */
+$breakpoint-mobile : 767px;
+
+
+/**
+ * Transitions
+ */
+$transitions : (
+  default : ease-in-out, 
+  cubic   : cubic-bezier(.64,.09,.08,1)
+);
+
+
+
+

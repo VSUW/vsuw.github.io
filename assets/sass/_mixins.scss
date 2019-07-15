@@ -1,0 +1,256 @@
+// _mixins.scss
+
+//EXAMPLE USAGE
+  // @include fluid-line-height(320px, 1600px, 26px, 50px);
+  //Header One
+  // $min_width: 320px;
+  // $max_width: 1600px;
+  // $min_font: 26px;
+  // $max_font: 50px;
+
+
+/**
+ * FLUID PADDING
+ */
+//All
+@mixin fluid-padding($min-vw, $max-vw, $min-padding, $max-padding) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-padding);
+  $u4: unit($max-padding);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      padding: $min-padding;
+      @media screen and (min-width: $min-vw) {
+        padding: calc(#{$min-padding} + #{strip-unit($max-padding - $min-padding)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        padding: $max-padding;
+      }
+    }
+  }
+}
+//Right Only
+@mixin fluid-padding-right($min-vw, $max-vw, $min-padding, $max-padding) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-padding);
+  $u4: unit($max-padding);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      padding-right: $min-padding;
+      @media screen and (min-width: $min-vw) {
+        padding-right: calc(#{$min-padding} + #{strip-unit($max-padding - $min-padding)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        padding-right: $max-padding;
+      }
+    }
+  }
+}
+//Left Only
+@mixin fluid-padding-left($min-vw, $max-vw, $min-padding, $max-padding) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-padding);
+  $u4: unit($max-padding);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      padding-left: $min-padding;
+      @media screen and (min-width: $min-vw) {
+        padding-left: calc(#{$min-padding} + #{strip-unit($max-padding - $min-padding)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        padding-left: $max-padding;
+      }
+    }
+  }
+}
+//Top Only
+@mixin fluid-padding-top($min-vw, $max-vw, $min-padding, $max-padding) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-padding);
+  $u4: unit($max-padding);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      padding-top: $min-padding;
+      @media screen and (min-width: $min-vw) {
+        padding-top: calc(#{$min-padding} + #{strip-unit($max-padding - $min-padding)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        padding-top: $max-padding;
+      }
+    }
+  }
+}
+//Bottom Only
+@mixin fluid-padding-bottom($min-vw, $max-vw, $min-padding, $max-padding) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-padding);
+  $u4: unit($max-padding);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      padding-bottom: $min-padding;
+      @media screen and (min-width: $min-vw) {
+        padding-bottom: calc(#{$min-padding} + #{strip-unit($max-padding - $min-padding)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        padding-bottom: $max-padding;
+      }
+    }
+  }
+}
+
+
+/**
+ * Clearfix
+ */
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+@mixin font( $size : 16px, $weight : normal, $transform : normal, $baseline : true ) {
+  font-size: $size;
+  font-weight: $weight;
+  text-transform: $transform;
+
+  @if $baseline {
+    margin:0;
+    line-height:1;
+  }
+}
+
+/**
+ * Media
+ * 
+ * @param  {Integer} $screen 
+ */
+@mixin media( $screen ) {
+  @if $screen == mobile {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $screen == tablet {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
+      @content;
+    }
+  }
+  @else {
+    @media screen and (max-width: $screen) {
+      @content;
+    } 
+  }
+}
+@mixin retina( ) {
+  @media all and (-webkit-min-device-pixel-ratio: 2) {
+      @content;
+  }
+}
+@mixin min( $screen ) {
+  @media screen and (min-width: $screen) {
+    @content;
+  } 
+}
+
+
+/**
+ * FLUID FONTS
+ */
+
+/**
+ * VH + VW Font
+ */
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+//EXAMPLE USAGE
+  // @include fluid-type(320px, 1600px, 26px, 50px);
+  //Header One
+  // $min_width: 320px;
+  // $max_width: 1600px;
+  // $min_font: 26px;
+  // $max_font: 50px;
+
+/**
+ * VH + VW Line Height
+ */
+@mixin fluid-line-height($min-vw, $max-vw, $min-line-height, $max-line-height) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-line-height);
+  $u4: unit($max-line-height);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      line-height: $min-line-height;
+      @media screen and (min-width: $min-vw) {
+        line-height: calc(#{$min-line-height} + #{strip-unit($max-line-height - $min-line-height)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        line-height: $max-line-height;
+      }
+    }
+  }
+}
+//EXAMPLE USAGE
+  // @include fluid-line-height(320px, 1600px, 26px, 50px);
+  //Header One
+  // $min_width: 320px;
+  // $max_width: 1600px;
+  // $min_font: 26px;
+  // $max_font: 50px;
+
+
+
+
+
+@mixin border-radius( $border-radius ) {
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  border-radius: $border-radius;
+}
+
+@mixin transition( $transition... ) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin transform($transform...) {
+  -webkit-transform: $transform;
+  -ms-transform: $transform;
+  transform: $transform;
+}

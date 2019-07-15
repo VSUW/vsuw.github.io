@@ -1,0 +1,187 @@
+// ========================================================================
+// Component: Body Styles
+// ========================================================================
+
+
+
+html {
+  box-sizing: border-box;
+  height:100%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  background-color: #fff;
+  font-family: $font-default;
+  font-weight:normal;
+  color: $color-text-default;
+  margin: 0;
+  // height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  
+  -moz-osx-font-smoothing: grayscale; 
+   -webkit-font-smoothing: antialiased;
+           font-smoothing: antialiased;
+    
+   // -webkit-font-smoothing: subpixel-antialiased; //good for light weight fonts
+  
+  &.body--signup {
+    background-color: $color-primary;
+  }
+}
+
+
+/**
+ * Anchor
+ */
+a { 
+  // text-decoration: none; 
+  color: inherit;
+  
+  /* Transition */
+  -webkit-transition: color 0.25s, background 0.25s;
+  -moz-transition: color 0.25s, background 0.25s;
+  -o-transition: color 0.25s, background 0.25s;
+  transition: color 0.25s, background 0.25s;
+}
+
+
+/**
+ * Headers
+ */
+h1,h2,h3,h4,h5,h6 {  
+  // line-height: 1;
+  margin: 0;
+}
+
+h1, .h1, %h1 {
+  font-family: $font-default; 
+  font-style: normal; 
+  font-weight: 900;
+  letter-spacing: 1px;
+  // @include fluid-type(320px, 1600px, 50px, 80px);
+  // @include fluid-line-height(320px, 1600px, 56px, 86px);
+  @include fluid-type(320px, 1600px, 50px, 70px);
+  @include fluid-line-height(320px, 1600px, 56px, 76px);
+}
+
+h2, .h2, %h2 {
+  font-family: $font-default;  
+  font-weight: 300;
+  letter-spacing: 1px;
+  @include fluid-type(320px, 1600px, 24px, 60px);
+  @include fluid-line-height(320px, 1600px, 34px, 95px);
+}
+
+h3, .h3, %h3 {
+  font-family: $font-default;  
+  font-weight: 900;
+  @include fluid-type(320px, 1600px, 30px, 40px);
+  @include fluid-line-height(320px, 1600px, 35px, 44px);
+}
+
+h4, .h4, %h4 {
+  font-family: $font-default;  
+  font-weight: 900;
+  @include fluid-type(320px, 1600px, 20px, 28px);
+  @include fluid-line-height(320px, 1600px, 30px, 50px);
+}
+
+h5, .h5, %h5 {
+  font-family: $font-default;  
+  font-weight: 900;
+  @include fluid-type(320px, 1600px, 19px, 22px);
+  @include fluid-line-height(320px, 1600px, 28px, 30px);
+}
+
+h6, .h6, %h6 {
+  font-family: $font-default;
+  font-weight: 300;
+  text-transform: uppercase;
+  @include fluid-type(320px, 1600px, 12px, 12px);
+  @include fluid-line-height(320px, 1600px, 26px, 26px);
+}
+
+p {
+  font-weight: 300;
+  @include fluid-type(320px, 1600px, 14px, 17px);
+  @include fluid-line-height(320px, 1600px, 24px, 27px);
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+
+  &.large {
+    font-family: $font-default;
+    @include fluid-type(320px, 1600px, 16px, 20px);
+    @include fluid-line-height(320px, 1600px, 26px, 26px);     
+  }
+  
+  &.small {
+    font-family: $font-default;
+    @include fluid-type(320px, 1600px, 12px, 14px);
+    @include fluid-line-height(320px, 1600px, 24px, 24px);     
+  } 
+}
+
+
+
+
+
+
+/**
+ * Misc Typography
+ */
+cite {
+  font-size: 13px;
+  font-weight: medium;
+  font-family: $font-default;
+  font-style: italic;
+}
+
+small { 
+  // display:inline-block;
+  font-size:13px;
+  text-transform: uppercase;
+  color: #2d353b;
+
+  &.alt {  }
+}
+em { font-style: italic; }
+strong { font-weight: bold; }
+
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: disc;
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+figure {
+  margin:0;
+  padding:0;
+  display: block;
+}
+
+
+/**
+ * Tables
+ */
+table {
+  
+  thead {}
+
+  tbody {
+
+  }
+
+  td, th {
+    border: none;
+    padding: 10px;
+  }
+}

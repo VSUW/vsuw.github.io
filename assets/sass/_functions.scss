@@ -1,0 +1,13 @@
+// _functions.scss
+
+
+/*
+ * Function to calculate PSD to CSS letter spacing 
+ *
+ * $font-size-px 				Photoshop font size
+ * $letter-spacing-ps		Photoshot letter spacing
+ * @return letter-spacing in px
+ */
+@function ls( $font-size-px, $letter-spacing-ps ) {
+	@return ( ( $letter-spacing-ps * $font-size-px ) / 1000 )
+}

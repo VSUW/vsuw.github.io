@@ -1,0 +1,633 @@
+// ========================================================================
+// Component: Donate Page Elements
+// ========================================================================
+
+// Donate Hero - Styles 
+// ========================================================================
+
+.donate__hero{
+	min-height: 828px;
+	height: 100%;
+	background-color: $color-gray-dark;
+	display: flex;
+	@include media ('mobile') {
+    // height: 1400px;
+  }
+	.grid__container{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		// height: 787px;
+		max-height: 100%;
+		width: 1250px;
+		max-width: 100%;
+		margin: 0 auto;
+		z-index: 1;
+		margin-top: -100px; 
+		margin-bottom: 100px;
+		@include media ('mobile') {
+	      flex-direction: column;
+	      margin-top: -60px; 
+	      margin-bottom: 30px;
+    }
+    @include media ('tablet') {
+      flex-direction: column;
+      margin-top: -60px;
+      margin-bottom: 70px; 
+    }
+		.grid__block{
+			flex: 1;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			text-align: center;
+			color: $color-white;
+			min-width: 0;
+	    &.bg-primary{
+	    	text-align: left;
+	    	padding: 0 80px;
+	    	margin-left: 5%;
+	    	@include media ('mobile') {
+		      // padding: 70px 20px;
+		      // padding-bottom: 30px;
+		      // margin: 0px 5%;
+		      display: none;
+		    }
+		    @include media ('tablet') {
+		      // padding: 70px;
+		      // margin: 0px 10%;
+		      display: none;
+		    }
+		    @media only screen 
+          and (min-device-width: 769px) 
+          and (max-device-width: 1024px) 
+          and (-webkit-min-device-pixel-ratio: 1) {
+         	padding: 100px;
+		      margin: 0px 10%;
+        }
+         @media only screen 
+          and (min-device-width: 1025px) 
+          and (max-device-width: 1200px) 
+          and (-webkit-min-device-pixel-ratio: 1) {
+         	padding: 0px 40px;
+		      margin-left: 5%;
+        }
+       
+	    	h3{
+	    		// padding-bottom: 30px;
+	    		@include media ('mobile') {
+			      text-align: left;
+			      padding-left: 20px;
+			    }
+	    	}
+	    	h4{
+	    		padding-bottom: 30px;
+	    		font-weight: 300;
+	    	}
+	    	ul{
+	    		@extend h4;
+	    		list-style: inside;
+	    		font-weight: 900;
+	    		padding-top: 70px;
+	    	}
+	    	#tabs{
+					// width: 400px;
+					min-height: 120px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					@include media ('mobile') {
+			      padding: 0px 14px;
+			    }
+			    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+				   width: 100%;
+				  }
+					ul.tabs{
+						display: flex;
+						flex-direction: row;
+						flex-wrap: wrap;
+						list-style: none;
+						justify-content: center;
+						align-items: center;
+						@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+					   width: 100%;
+					  }
+						li{
+							flex: 1 1 25%;
+							border-style: solid;
+              border-width: .5px;
+              border-color: $color-white;
+							text-align: center;
+							font-weight: 300;
+							font-size: 20px;
+							padding: 5px 20px;
+							cursor: pointer;
+							&:hover{
+					      font-weight: 900;
+					      // background-color: $color-primary-dark;
+							}
+							@include media ('mobile') {
+					      padding: 9px 2px;
+					      font-size: 17px;
+					    }
+					    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+						    flex: 1 1 65px;
+						  }
+					    &.tab_1{
+					    	border-right: none;
+    						border-bottom: none;
+					    }
+					    &.tab_2{
+					    	border-right: none;
+    						border-bottom: none;
+					    }
+					    &.tab_3{
+					    	border-right: none;
+    						border-bottom: none;
+					    }
+					    &.tab_4{
+    						border-bottom: none;
+					    }
+					    &.tab_5{
+    						border-right: none;
+					    }
+					    &.tab_6{
+    						border-right: none;
+					    }
+					    &.tab_7{
+    						border-right: none;
+					    }
+							&.active {
+					      background-color: $color-white;
+					      color: $color-primary;
+					      font-weight: 900;
+					    }
+						}
+					}
+				}
+				.tab-content{
+					display: none;
+					@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		       width: 100%;
+		       padding-top: 50px;
+		      }
+					&.active{
+						display: inherit;
+						.grid__container__tabs{
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+							align-items: center;
+							.grid__block{
+								display: flex;
+								flex-direction: row;
+								// min-width: 100%;
+								// width: 400px;
+								min-height: 300px;
+								@include media ('mobile') {
+						      flex-direction: column;
+						    }
+						    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+					       width: 100%;
+					      }
+								.block{
+									padding: 0px 30px;
+									 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+							       width: 100%;
+							      }
+									.filter{
+									filter: invert(1);
+									}
+									img{
+										width: 100px;
+										height: 100%;
+										color: $color-white;
+										@include media ('mobile') {
+								      width: 50px;
+											height: 100%;
+											color: $color-white;
+							    	}
+									}
+								}
+								.block__text{
+									text-align: left;
+									padding: 0px 20px;
+									@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+						       width: 100%;
+						      }
+									p.small{
+										font-size: 12px;
+										font-weight: 500;
+										text-transform: uppercase;
+									}
+								}
+							}
+						}
+					}
+				}
+	    }
+	    &.bg-color-white{
+	    	padding: 0px 85px;
+	    	margin-right: 5%;
+
+	    	h3{
+	    		font-size: 24px;
+	    		line-height: 38px;
+	    	}
+	    	 @media only screen 
+	          and (min-device-width: 1025px) 
+	          and (max-device-width: 1200px) 
+	          and (-webkit-min-device-pixel-ratio: 1) {
+	         	padding: 0px 40px;
+			      margin-right: 5%;
+	        }
+	    	.form-title{
+	    		text-align: left;
+	    		margin-bottom: 0px;
+	    		@include media ('mobile') {
+			      padding-bottom: 0px;
+			    }
+	    	}
+	    	.personal-title{
+	    		text-align: left;
+	    		padding-bottom: 30px;
+	    	}
+	    	.personal-invest{
+	    		text-align: left;
+	    	}
+	    	@include media ('mobile') {
+		      padding: 70px 40px;
+		      margin: 0px 5%;
+		    }
+		    @include media ('tablet') {
+		      padding: 70px;
+		      margin: 0px 10%;
+		    }
+		     @media only screen 
+          and (min-device-width: 769px) 
+          and (max-device-width: 1024px) 
+          and (-webkit-min-device-pixel-ratio: 1) {
+         	padding: 100px;
+		      margin: 0px 10%;
+        }
+
+			  #donationAmount{
+			  	border: 1px solid #3d4345;
+			  	@include media ('mobile') {
+			      padding:0px  10px!important ;
+			    }
+			    @include media ('tablet') {
+			      border: 1px solid #3d4345;
+			      padding:0px 20px!important ;
+			    }
+			  }
+			  #firstNameDonation{
+			  	border: 1px solid #3d4345;
+			  	padding: 0px 30px !important;
+			  	margin-right: 5px;
+			  	@include media ('mobile') {
+			      padding:0px  10px!important ;
+			      margin-right: 0px;
+			    }
+			    @include media ('tablet') {
+			      border: 1px solid #3d4345;
+			      padding:0px 20px!important ;
+			    }
+			  }
+			  #lastNameDonation{
+			  	border: 1px solid #3d4345;
+			  	padding: 0px 30px !important;
+			  	margin-left: 5px;
+			  	// border-left: none;
+			  	@include media ('mobile') {
+			      border: 1px solid #3d4345;
+			      padding:0px  10px!important ;
+			      margin-left: 0px;
+			    }
+			    @include media ('tablet') {
+			      border: 1px solid #3d4345;
+			      padding:0px 20px!important ;
+			    }
+			  }
+			  #emailAddressDonation{
+			  	border: 1px solid #3d4345;
+			  	padding: 0px 30px !important;
+			  	@include media ('mobile') {
+			      padding:0px  10px!important ;
+			    }
+			    @include media ('tablet') {
+			      border: 1px solid #3d4345;
+			      padding:0px 20px!important ;
+			    }
+			  }
+	    	input{
+	    		margin-bottom: 10px;
+	    	}
+	    	#state{
+	    		width: 49% !important;
+	    		display: inline-block;
+	    		@include media ('mobile') {
+			      width: 100% !important;
+			    }
+	    	}
+	    	#zipcode{
+	    		width: 49% !important;
+	    		display: inline-block;
+	    		@include media ('mobile') {
+			      width: 100% !important;
+			    }
+	    	}
+	    	#submit{
+	    		margin-top: 20px;
+	    		@extend %btn;
+					-webkit-appearance: none !important;
+				  -moz-appearance: none !important;
+				  appearance:none !important;
+					background-color: #5c8bbf;
+					font-family: $fa;
+					font-size: 20px;
+					color: $color-white;
+					text-transform: uppercase;
+					letter-spacing: 0;
+					border: none;
+					outline: none;
+					transition: all .2s ease-in-out;
+					text-align: center;
+					border-radius: 0px;
+					width: 60px;
+					max-width: 100%;
+					height: 60px;
+					&:focus{
+						outline: none;
+					}
+	    	}
+
+	    	h3{
+	    		color: $color-gray-dark;
+	    		// padding-bottom: 30px;
+	    	}
+	    }
+		}
+	}
+}
+
+.btn--donate{
+	padding-top: 20px;
+	 @include media ('mobile') {
+    padding-top: 25px;
+  }
+}
+		
+
+fieldset.row.input-price-options {
+  padding: 0px;
+  margin: 10px 0px;
+}
+
+fieldset.row {
+  padding: 0px;
+}
+
+fieldset{
+	border: 0 none;
+}
+
+ // duration - one time or monthly
+ .radio-donation {
+  text-align: left;
+  padding-bottom: 25px;
+  padding-right: 0px;
+  padding-left: 0px;
+
+  li {
+    display: block;
+    margin-bottom: 5px;
+    color: $color-gray-dark;
+  }
+ }
+
+ #donation-form{display:none;}
+
+ /**
+ * DONATION FORM STYLES
+ */
+
+.donation-form.donation-regular {
+  // background-color: #f3f3f3;
+
+
+}
+
+.donation--form {
+  // background-color: #f3f3f3 !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+   width: 100%;
+   padding: 50px;
+  }
+}
+
+.donation--form.hidden {
+  display: none;
+}
+
+.donation--form.show {
+  display: block !important;
+  // width: 575px;
+  // height: 100%;
+  // padding: 0px !important;
+  // overflow:hidden !important;
+  iframe.donately-donation-iframe{
+  	min-width: 100%;
+  	width: 600px!important;
+  	// max-height: 600px !important;
+  	overflow:hidden !important;
+  	 @include media ('mobile') {
+	    width: 280px !important;
+	  }
+	   @include media ('tablet') {
+	    width: 600px!important;
+	     margin-left: -80px !important;
+  		 margin-right: -63px !important;
+	  }
+  }
+  // iframe{
+  // 	overflow-x:hidden !important;
+  // 	overflow-y:hidden !important;
+  // }
+  // @include media ('tablet') {
+  //   max-width: 400px !important;
+  //   width: 100% !important;
+  //   margin-left: 36px !important;
+  //   margin-right: 36px !important;
+  // }
+  //  @include media ('mobile') {
+  //   max-width: 400px !important;
+  //   width: 100% !important;
+  //   margin-left: -80px !important;
+  //   margin-right: -63px !important;
+  // }
+
+  form.donately-donation-form {
+    display: block !important;
+  }
+}
+
+.donately-donation-form, .donately-thank-you, .donately-validation {
+     font-size: auto;
+     // min-width: 100%;
+     // max-width: 750px;
+     margin: 0px auto;
+     border: none;
+     // padding: 100px;
+     // padding: 150px 100px 100px 100px;
+     // background: #f3f3f3;
+
+}
+
+.donately-donation-form{
+	padding: 0px !important;
+}
+
+.donation-form-impact {
+
+  .donately-donation-form, .donately-thank-you, .donately-validation {
+
+      @media screen and (max-width: 1599px) {
+        // padding: 89px;
+      }
+
+      @media screen and (min-width: 1600px ) {
+        // padding: 89px;
+      }
+
+      @include media ('tablet') {
+        padding: 0px !important;
+      }
+      @include media ('mobile') {
+        padding: 0px !important;
+      }
+    }
+
+}
+
+.donately-validation {
+
+     fieldset{
+          position: relative;
+          border: none;
+     }
+
+     .input-half{
+          width: 48.5%;
+          float: left;
+     }
+
+     .form-title{
+      margin-bottom: 30px;
+
+      @include media ('mobile') {
+        text-align: center;
+      }
+     }
+
+     // price options
+     .input-price-options {
+          .gfield_label { display: none; }
+          .gfield_radio input { display: none; }
+          li {
+               line-height: 55px;
+               padding-left: 0;
+               padding-right: 0;
+               margin-right: 10px; 
+               &:last-child{
+                    border-right: none;
+                    margin-right: 0px;
+               }
+
+                // @include media ('mobile') {
+                //   margin-right: 10px;
+                // }
+      
+               //default
+               label { 
+                    text-align: center;
+                    font-weight: 400;
+                    width:100%;
+                    background: #fff;
+                    border: none;
+                    cursor: pointer;
+                    display: inline-block;
+                    max-width: 100%;
+                    margin-bottom: 5px;
+                    line-height: 55px;
+                    // padding: 20px 25px;
+                    &:before{
+                         display: none;
+                    }
+               }
+
+               //checked
+               input[type="radio"]:checked+label{
+                  background: $color-secondary;
+                  color: #ffffff;
+               }
+          }
+     }
+
+     // duration - one time or monthly
+     .radio-donation {
+          text-align: left;
+          padding-bottom: 25px;
+          padding-right: 0px;
+          padding-left: 0px;
+
+          li {
+            display: block;
+            margin-bottom: 5px;
+          }
+     }
+     .campaign-donation{
+          // border-top:1px solid #dddddd;
+          padding-top:20px;
+     }
+
+     @include media(tablet) {
+          padding:25px 10px;
+     }
+
+     @include media(mobile) {
+          // padding: 60px 30px;
+          .input-half{
+               width:100%;
+          }
+
+          .circle-photo{
+               margin:0 auto;
+          }
+          .col-sm-9{
+               &.text-right{text-align:center !important;}
+          }
+     }
+} //end .donation-form
+
+
+//entire form
+.donation-regular .donately-donation-form{
+    display: none !important;
+    &.active{
+      display: block !important;
+     }
+    &.show {
+      display: block !important; 
+    }
+     @include media(mobile) {
+        padding: 0px !important;
+     }
+}
+
+
