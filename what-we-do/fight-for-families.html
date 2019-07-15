@@ -15,11 +15,11 @@
   <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon.png?v3"> -->
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
   <!-- <link rel="stylesheet" href="assets/css/style.min.css"> -->
 
   <!-- Modernizr & Prefix Free (All other JS in footer) -->
-  <script src="../components/prefix-free/prefixfree.min.js"></script>
+  <script src="/components/prefix-free/prefixfree.min.js"></script>
   
   <!-- Typekit -->
   <link rel="stylesheet" href="https://use.typekit.net/mue7yvz.css">
@@ -44,38 +44,10 @@
   </div>
   <header id="header" class="header row">
     <div class="">
-      <a href="homepage.html" class="header__logo" title="united way valley of the sun" alt="United Way Valley of the Sun"></a>
+      <a href="/" class="header__logo" title="united way valley of the sun" alt="United Way Valley of the Sun"></a>
     </div>
     <nav id="nav" class="nav">
-        <ul id="menu-primary" class="menu menu-primary"> <!--menu primary -->
-          <li class="menu-item menu-item-fixed menu-item-has-children"><a href="/about-us.html">About</a>
-            <ul class="sub-menu">
-              <a href="/press-kit.html"><li class="menu-item">Press Kit</li></a>
-            </ul>
-          </li>
-          <li class="menu-item menu-item-fixed menu-item-has-children"><a href="/what-we-do.html">What We Do</a>
-            <ul class="sub-menu">
-              <a href="/ffk.html"><li class="menu-item">Fight for Kids</li></a>
-              <a href="/programs.html"><li class="menu-item">Programs</li></a>
-              <a href="/affinity-group.html"><li class="menu-item">Affinity Group</li></a>
-            </ul>
-          </li>
-          <li class="menu-item menu-item-fixed menu-item-has-children"><a href="/get-involved.html">Get Involved</a>
-            <ul class="sub-menu">
-              <a href="/volunteer.html"><li class="menu-item">Volunteer</li></a>
-              <a href="//donate.htmll"><li class="menu-item">Donate</li></a>
-            </ul>
-          </li>
-          <li class="menu-item menu-item-fixed menu-item-has-children"><a href="/get-help.html">Get Help</a>
-            <ul class="sub-menu">
-              <a href="/resources.html"><li class="menu-item">Resources</li></a>
-              <a href="/affinity-group.html"><li class="menu-item">Affinity Group</li></a>
-              <a href="/marketing-landing.html"><li class="menu-item">Marketing</li></a>
-            </ul>
-          </li>
-           <li class="menu-item menu-item-fixed menu-item-has-children"><a href="/blog.html">Blog</a></li>
-           <li class="menu-item menu-item-give"><a href="/donate.html">Donate</a></li>
-        </ul> <!-- menu primary closing -->
+
       </nav>
     </header>
   </div>
@@ -85,80 +57,81 @@
 
  
 
-<section class="hero__container">
-	<div class="container container-full centered center">
+
+<section class="grid__hero-sub" style="background-image: url(/assets/images/ffk-hero.jpg)">
+	<div class="grid__inner">
+		<div class="grid__text">
+			<h1>We Fight for Families</h1>
+			<p>Making sure kids get the resources they need in order to break the cycle of poverty for future generations.</p>
+		</div>
+	</div>
+</section>
+
+<!-- Element: Our Programs -->
+
+<section class="section alternating_header">
+	<div class="container container-med">
+		<h3>Our Programs</h3>
+		<!-- <h4>Supporting children with the nutrition they need to succeed in school is a cause we all can get behind. Here are the key programs that Women United members champion.</h4> -->
+	</div>
+</section>
+<section class="section alternating-blocks">
+	<div class="container container-full centered center bg-color-gray">
 		<div class="grid__container">
-			<div class="grid__top" style="background-image: url(/assets/images/home-hero.jpg) ">
-				<div class="grid__inner">
-					<h1>Breaking the Cycle of Poverty</h1>
-					<h2>in Maricopa County</h2>
-					<p>Your help makes financial self-sufficiency possible for every individual and family our community</p>
-					<a href="/donate" class="btn btn--hero">Donate Now</a>
+			<div class="grid__blocks">
+				<div class="grid__text">
+					<p class="large">School Readiness</p>
+					<p>Preparing kids for success in Kindergarten and beyond. </p>
+					<a href="/#" class="btn--link-alt">Learn More<i class="icon-arrow-right-sml"></i></a>
+				</div>
+				<div class="grid__img">
+					<img src="/assets/images/gethelp-resources.jpg" alt="Image of women infront a computer">
 				</div>
 			</div>
-			<div class="grid__bottom bg-color-gray-dark">
-				<div class="grid__inner"style="background-image: url(/assets/images/home-photo-intro.jpg) ">
-					<div class="grid__text">
-						<h3>Who We Are</h3>
-						<h4>We are the only organization in Maricopa County that unites as many vital partners and passionate community members in an effort to end poverty.</h4>
-						<a href="/about-us" class="btn btn--hero-sub ">Find Out How</a>
-					</div>
+			<div class="grid__blocks_alt">
+				<div class="grid__img_alt">
+					<img src="/assets/images/programs-thumb-vello.jpg" alt="Image of child infront a computer">
 				</div>
+				<div class="grid__text_alt">
+					<p class="large">Vello Online Tutoring </p>
+					<p>Giving students critical one-on-one reading sessions with caring volunteers.   </p>
+					<a href="/#" class="btn--link-alt">Learn More<i class="icon-arrow-right-sml"></i></a>
+				</div>
+			</div>
+			<div class="grid__blocks">
+				<div class="grid__text">
+					<p class="large">Quality After School and Summer Programs </p>
+					<p>Providing access to mentoring and counseling needed for life and school challenges.</p>
+					<a href="/#" class="btn--link-alt">Learn More<i class="icon-arrow-right-sml"></i></a>
+				</div>
+				<div class="grid__img">
+					<img src="/assets/images/programs-thumb-afterschool.jpg" alt=" Image of smiling girl">
+				</div>
+			</div>
+			<div class="btn-container">
+				<a href="/#" class="btn btn--hero">Show More</a>
 			</div>
 		</div>
 	</div>
 </section>
 
 
-<!-- Element: Who we fight for  -->
 
-<section class="section three_block_cta">
-	<div class="container container-med centered center">
-		<div class="container container-small centered center">
-			<h3>Who we fight for</h3>
-		</div>
-		<div class="grid__container">
-			<div class="grid__blocks">
-				<div class="block secondary">
-					<p class="small">We Fight for</p>
-					<h3>Kids</h3>
-					<div class="inner__text">
-						<p>By helping kids at the start of their education, we are breaking the cycle of poverty for future generations.</p>
-					</div>
-					<a href="/#" class="btn btn-secondary-alt">Learn More</a>
-				</div>
-				<div class="block primary">
-					<p class="small">We Fight for</p>
-					<h3>Families</h3>
-					<div class="inner__text">
-						<p>We help hard-working families tackle challenging issues so they can achieve stability and success.</p>
-					</div>
-					<a href="/#" class="btn btn-primary-alt">Learn More</a>
-				</div>
-				<div class="block tertiary">
-					<p class="small">We Fight for</p>
-					<h3>Neighborhoods</h3>
-					<div class="inner__text">
-						<p>Through the right partnerships, we identify community needs and build long-term solutions. </p>
-					</div>
-					<a href="/#" class="btn btn-tertiary-alt">Learn More</a>
-				</div>
-			</div>
-		</div>
-	</div>	
-</section>
+<!-- Element: How to Get Involved -->
 
-<!-- Element: Who we fight for  -->
-
-<section class="section--xxlarge mobile-hide">
+<section class="section mobile-hide">
+	<div class="container centered center">
+		<h3>How We Help</h3>
+		<p>There are many ways you can help set your community up for success. </p>
+	</div>
 </section>
 <section class="four-hover section--pb mobile-hide">
 	<div class="container container-full">
 		<div class="container--bg">
-			<img class="active" id="img-one" src="/assets/images/home-impactareas-1-donate.jpg" alt="Donate Group Image">
-			<img id="img-two" src="/assets/images/home-impactareas-2-volunteer.jpg" alt=" Volunteer smiling girls ">
-			<img id="img-three" src="/assets/images/home-impactareas-3-advocate.jpg" alt=" Advocate smiling mother and children">
-			<img id="img-four" src="/assets/images/home-impactareas-4-joingroup.jpg" alt=" Join a Group smiling women with hat">
+			<img class="active" id="img-one" src="/assets/images/gethelp-resources.jpg" alt="Image of women infront a computer">
+			<img id="img-two" src="/assets/images/gethelp-resources.jpg" alt="Image of child infront a computer">
+			<img id="img-three" src="/assets/images/gethelp-resources.jpg" alt="Image of child infront a computer">
+			<img id="img-four" src="/assets/images/gethelp-resources.jpg" alt="Image of smiling girl">
 		</div> 
 		<div class="row overlapped-row">
 			<div class="col-3 block-hover" id="first-col" rel="#img-one">
@@ -185,7 +158,7 @@
 					<h6>Get Involved</h6>
 			  	<h3>Advocate</h3>
 			  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis quasi enim voluptate, dicta architecto odit iusto, impedit perferendis quibusdam qui consequuntur incidunt suscipit praesentium quae, sint beatae possimus neque.</p>
-			  	<a href="/advocate" class="btn__link-gray">Learn More<i class="icon-arrow-right-sml"></i></a>
+			  	<a href="/volunteer" class="btn__link-gray">Learn More<i class="icon-arrow-right-sml"></i></a>
 			  </div>
 		  </div>
 		  <div class="col-3 block-hover col-odd" id="fourth-col" rel="#img-four">
@@ -194,65 +167,65 @@
 					<h6>Get Involved</h6>
 			  	<h3>Join a Group</h3>
 			  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore veritatis, ex aperiam inventore, iure consequuntur vel dolorum eum, iste ipsum officia placeat, fugiat id quia quam quisquam. Accusamus officiis, cum.</p>
-			  	<a href="/join-a-group" class="btn__link-gray">Learn More<i class="icon-arrow-right-sml"></i></a>
+			  	<a href="/volunteer" class="btn__link-gray">Learn More<i class="icon-arrow-right-sml"></i></a>
 			  </div>
 		  </div>
 		</div>
 	</div>
 </section>
 
-<section class="mobile-only mb50">
+<section class="section mobile-only">
 	<div class="container centered center">
 		<h3>How We Help</h3>
 		<p>There are many ways you can help set your community up for success. </p>
 	</div>
 </section>
-<section class="four-hover mobile-only">
+<section class="four-hover section mobile-only">
 	<div class="container container--full">
 		<div class="row overlapped-row">
-			<div class="col-3 block-hover" id="first-col" style="background-image: url(/assets/images/home-impactareas-1-donate.jpg);">
+			<div class="col-3 block-hover" id="first-col" style="background-image: url(/assets/images/gethelp-resources.jpg);">
 				<div class="col-inner">
 					<h3>Donate</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore veritatis, ex aperiam inventore, iure consequuntur vel dolorum eum, iste ipsum officia placeat, fugiat id quia quam quisquam. Accusamus officiis, cum.</p>
-					<a href="/donate" class="btn__link-gray">Learn More<i class="icon-arrow-right-sml"></i></a>					
+					<a href="/#" class="btn__link-gray">Learn More<i class="icon-arrow-right-sml"></i></a>					
 				</div>
 			</div>
-		  <div class="col-3 block-hover col-odd" id="second-col" style="background-image: url(/assets/images/home-impactareas-2-volunteer.jpg);">
+		  <div class="col-3 block-hover col-odd" id="second-col" style="background-image: url(/assets/images/gethelp-resources.jpg);">
 		  	<div class="col-inner">
 			  	<h3>Volunteer</h3>
 			  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore veritatis, ex aperiam inventore, iure consequuntur vel dolorum eum, iste ipsum officia placeat, fugiat id quia quam quisquam. Accusamus officiis, cum.</p>
-			  	<a href="/volunteer" class="btn__link-gray">Learn More<i class="icon-arrow-right-sml"></i></a>
+			  	<a href="/#" class="btn__link-gray">Learn More<i class="icon-arrow-right-sml"></i></a>
 			  </div>
 		  </div>
-		  <div class="col-3 block-hover" id="third-col" style="background-image: url(assets/images/home-impactareas-3-advocate.jpg);">
+		  <div class="col-3 block-hover" id="third-col" style="background-image: url(/assets/images/gethelp-resources.jpg);">
 		  	<div class="col-inner">
 			  	<h3>Advocate</h3>
 			  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore veritatis, ex aperiam inventore, iure consequuntur vel dolorum eum, iste ipsum officia placeat, fugiat id quia quam quisquam. Accusamus officiis, cum.</p>
-			  	<a href="/advocate" class="btn__link-gray">Learn More<i class="icon-arrow-right-sml"></i></a>
+			  	<a href="/#" class="btn__link-gray">Learn More<i class="icon-arrow-right-sml"></i></a>
 			  </div>
 		  </div>
-		  <div class="col-3 block-hover col-odd" id="fourth-col" style="background-image: url(/assets/images/home-impactareas-4-joingroup.jpg);">
+		  <div class="col-3 block-hover col-odd" id="fourth-col" style="background-image: url(/assets/images/gethelp-resources.jpg);">
 		  	<div class="col-inner">
-			  	<h3>Join a Group</h3>
+			  	<h3>Join A Group</h3>
 			  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore veritatis, ex aperiam inventore, iure consequuntur vel dolorum eum, iste ipsum officia placeat, fugiat id quia quam quisquam. Accusamus officiis, cum.</p>
-			  	<a href="/join-a-group" class="btn__link-gray">Learn More<i class="icon-arrow-right-sml"></i></a>
+			  	<a href="/#" class="btn__link-gray">Learn More<i class="icon-arrow-right-sml"></i></a>
 			  </div>
 		  </div>
 		</div>
 	</div>
 </section>
 
-<!-- Element: What We're Up To  -->
+<!-- Element: Related Stories -->
 
-<section class="section three-block-slider">
+<section class="section three-block-slider affinity__events">
 	<div class="container container-full centered center">
-		<h3>What We're Up To</h3>
+		<h3>Related Stories</h3>
 		<div class="row">
 			<div class="col-10 centered center">
 				<div class="slider__featured">
 					<div class="slider__block">
 						<div class="slider_img">
-							<img src="/assets/images/about-mission.jpg" alt="Group image">
+							<img src="/assets/images/resources-nutritiontools-2.jpg" alt="Image of smiling child">
 						</div>
 						<div class="slider_text">
 							<p class="large">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
@@ -263,7 +236,7 @@
 					</div>
 					<div class="slider__block">
 						<div class="slider_img">
-							<img src="/assets/images/about-mission.jpg" alt="Group image">
+							<img src="/assets/images/resources-nutritiontools-summerfood.jpg" alt="Image of smiling child">
 						</div>
 						<div class="slider_text">
 							<p class="large">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
@@ -274,7 +247,7 @@
 					</div>
 					<div class="slider__block">
 						<div class="slider_img">
-							<img src="/assets/images/about-mission.jpg" alt="Group image">
+							<img src="/assets/images/resources-nutritiontools-3.jpg" alt="Image of smiling child">
 						</div>
 						<div class="slider_text">
 							<p class="large">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
@@ -285,7 +258,7 @@
 					</div>
 					<div class="slider__block">
 						<div class="slider_img">
-							<img src="/assets/images/about-mission.jpg" alt="Group image">
+							<img src="/assets/images/resources-financialtools-smart.jpg" alt="Image of man with wallet">
 						</div>
 						<div class="slider_text">
 							<p class="large">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
@@ -293,7 +266,36 @@
 							tempor incididunt ut labore et dolore magna aliqua.</p>
 							<a href="/#" class="btn--link-alt">Read More<i class="icon-arrow-right-sml"></i></a>
 						</div>
-					</div>	
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Element: Other Community Objectives -->
+
+<section class="two-block-cta">
+	<div class="container container-full centered center bg-color-gray">
+		<div class="grid__container">
+			<div class="grid__text">
+				<h3>Other Community Objectives </h3>
+			</div>
+			<div class="grid__blocks">
+				<div class="block" style="background-image: url(/assets/images/ffk-other-fightforfamilies.jpg); ">
+					<h3>Fight for Families</h3>
+					<div class="text__inner">
+						<p>We help hard-working families tackle challenging issues so they can achieve stability and success.</p>
+					</div>
+					<a href="/#" class="btn">Learn More</a>
+				</div>
+				<div class="block"style="background-image: url(/assets/images/ffk-other-fightforneighborhoods.jpg); ">
+					<h3>Fight for Neighborhoods</h3>
+					<div class="text__inner">
+						<p>Through the right partnerships, we identify community needs and build long term solutions.</p>
+					</div>
+					<a href="/#" class="btn">Learn More</a>
 				</div>
 			</div>
 		</div>
@@ -425,13 +427,13 @@
 
 
 	<!-- Bower Components -->
-	<script src="assets/js/components/beefup.min.js"></script>
-	<script src="assets/js/components/countup.js"></script>	
-	<script src="components/slick/slick.min.js"></script>	
+	<script src="/assets/js/components/beefup.min.js"></script>
+	<script src="/assets/js/components/countup.js"></script>	
+	<script src="/components/slick/slick.min.js"></script>	
 
 	<!-- Main Application JS -->
-	<!-- <script src="assets/js/plugins.js"></script> -->
-	<script src="assets/js/app.js"></script>
+	<!-- <script src="/assets/js/plugins.js"></script> -->
+	<script src="/assets/js/app.js"></script>
 		
 
  

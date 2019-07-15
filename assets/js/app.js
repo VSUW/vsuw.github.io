@@ -1,3 +1,50 @@
+let nav = `<ul id="menu-primary" class="menu menu-primary"> <!--menu primary -->
+          <li class="menu-item menu-item-fixed menu-item-has-children"><a href="/about-us">About</a>
+            <ul class="sub-menu">
+            <a href="/about-us/leadership.html"><li class="menu-item">Leadership</li></a>
+            <a href="/about-us/contact-us.html"><li class="menu-item">Contact Us</li></a>
+              <a href="/about-us/ethics-and-accountability.html"><li class="menu-item">Ethics and Accountability</li></a>
+              <a href="/about-us/press-kit.html"><li class="menu-item">Press Kit</li></a>
+            </ul>
+          </li>
+		 
+		  <li class="menu-item menu-item-fixed menu-item-has-children"><a href="/what-we-do">What We Do</a>
+            <ul class="sub-menu">
+              <a href="/what-we-do/fight-for-kids.html"><li class="menu-item">Fight for Kids</li></a>
+              <a href="/what-we-do/fight-for-families.html"><li class="menu-item">Fight for Families</li></a>
+              <a href="/what-we-do/fight-for-neighborhoods.html"><li class="menu-item">Fight for Neighborhoods</li></a>
+			        <a href="/what-we-do/fight-for-innovative-solutions.html"><li class="menu-item">Fight for Innovative Solutions</li></a>
+            </ul>
+          </li>
+		 
+		  <li class="menu-item menu-item-fixed menu-item-has-children"><a href="/get-involved">Get Involved</a>
+            <ul class="sub-menu">
+              <a href="/get-involved/volunteer.html"><li class="menu-item">Volunteer</li></a>
+              <a href="/get-involved/ways-to-give.html"><li class="menu-item">Ways To Give</li></a>
+              <a href="/get-involved/join-a-group.html"><li class="menu-item">Join a Group</li></a>
+              <a href="/get-involved/advocate.html"><li class="menu-item">Advocate</li></a>
+            </ul>
+          </li>
+		 
+		  <li class="menu-item menu-item-fixed menu-item-has-children"><a href="/get-help">Get Help</a>
+            <ul class="sub-menu">
+              <a href="/get-help/resources.html"><li class="menu-item">Resources</li></a>
+              <a href="/get-help/211.html"><li class="menu-item">211</li></a>
+              <a href="/get-help/publications.html"><li class="menu-item">Publications</li></a>
+              <a href="/get-help/project-connect.html"><li class="menu-item">Project Connect</li></a>
+            </ul>
+          </li>
+		   
+		  <li class="menu-item menu-item-fixed menu-item-has-children"><a href="/blog">Blog</a></li>
+		   
+           <li class="menu-item menu-item-give"><a href="/donate">Donate</a></li>
+        </ul> <!-- menu primary closing -->`
+
+
+
+$('nav').html(nav);
+
+
 !(function ($) {
 
   /**
@@ -1665,3 +1712,9 @@ $('.plus-btn').click(function(){
   
   return app;
 })(jQuery);
+
+
+
+
+
+
