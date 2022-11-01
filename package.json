@@ -15,7 +15,7 @@
 		"gulp-imagemin": "*",
 		"gulp-minify-css": "*",
 		"gulp-rename": "*",
-		"gulp-ruby-sass": "^1.0.1",
+		"gulp-ruby-sass": "^4.0.0",
 		"gulp-s3-upload": "*",
 		"gulp-sourcemaps": "^1.5.1",
 		"gulp-svgmin": "*",
